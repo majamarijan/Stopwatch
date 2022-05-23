@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: calc(2.5rem + 2vw);
+	color: #EAEEEF;
+	height: 100vh;
+	width: 100%;
+	background: black;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	max-width: 900px;
+	margin: 0 auto;
+	
+	background-image: url('./milos.jpg');
+	background-repeat: no-repeat;
+	background-position: 0% 32%;
+	background-size: cover;
+}
+
+#stopWatch {
+	text-shadow: 2px 2px 2px lightgray;
+	background: rgba(100,100,100,0.3);
+	padding: 40px;
+	border-radius: 10%;
+	position: relative;
+	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	
+	animation: easeIn 3s ease-in-out;
+}
+
+@keyframes easeIn {
+	from {color:darkgray; margin-top: 100%;}
+	to {color:#EAEEEF;margin-top: 0%}
+}
+
+.timer {
+	flex: 2 100%;
+}
+
+.controls {
+	flex: 2 100%;
+}
+
+.resetBtn, .startBtn {
+	background: none;
+	border: 1px solid lightgray;
+	padding: 20px;
+	border-radius: 20px;
+	color: lightgray;
+	text-shadow: 1px 1px 0px black;
+}
+
+button {
+	cursor: pointer;
+	outline: none; 
+}
+
+.hover {
+	background: #D6D6D6; 
+}
+
+.startBtn[disabled] {
+	color: darkgray;
+	border-color: gray;
+	cursor: default;
+}
+
+.clicked {
+	outline: none; 
+}
+
+.info {
+	position: absolute;
+	bottom:0;
+	left:0;
+	right: 0;
+	background: black;
+	height: 50px;
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+.info code {
+	background: lightgray;
+	color: black;
+	display: inline-block;
+	padding: 2px;
+}
+
+.dark {
+	background: rgba(0,0,0,0.2);
+}
+
+
+
+
+
